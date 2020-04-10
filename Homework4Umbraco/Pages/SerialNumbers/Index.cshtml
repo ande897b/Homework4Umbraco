@@ -5,11 +5,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>List Of SerialNumbers</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -26,11 +24,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SerialNumberID)
             </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.SerialNumberID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.SerialNumberID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.SerialNumberID">Delete</a>
-            </td>
+           
         </tr>
 }
     </tbody>

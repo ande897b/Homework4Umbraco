@@ -27,12 +27,14 @@ namespace Homework4Umbraco.Data
                 context.SerialNumber.Add(new SerialNumber { SerialNumberID = line.ToString() });
                 SerialNumberController.AddSerialNumber(new SerialNumber { SerialNumberID = line.ToString() });
             }
+          
+            
            
-            LoadFromDB();
+            
 
-            if (context.SerialNumber.Any())
+            if (context.SerialNumber.Any() && context.Participant.Any())
             {
-
+                LoadFromDB();
                 return;   // DB has been seeded
             }
             context.SaveChanges();
