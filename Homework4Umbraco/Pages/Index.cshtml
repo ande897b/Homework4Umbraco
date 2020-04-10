@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div>
+        <div style="width: 50%; height: 686px; float: left;
+    background:  linear-gradient(
+      rgb(150, 25, 50, 0.91),
+      rgb(150, 25, 50, 0.91)
+    ),
+    url(https://www.brhfoundation.org/wp-content/uploads/light-grey-color-background-solid-light-grey-backgrounds-solid-grey-light-grey-colour-background.jpg);
+    background-size: 100%;
+    background-position-y: -80px;">
+
+            <div style="margin: 20% 15%; color: rgb(255, 255, 255); font-weight: bold;">
+                <p style="font-size: 35px;">Acme Corporations yearly raffle for Exploding Tennisballs has returned!</p>
+                <p style="font-size: 20px;">Register up to two times for each valid serial number.</p>
+                <img width="250" height="250" src="https://upload.wikimedia.org/wikipedia/en/8/84/Box_of_%22ACME_EXPLOSIVE_TENNIS_BALLS%22_%28screencap%29.jpg">
+            </div>
+        </div>
+        <div style="width: 50%; height: 686px; float: right;
+    background:  linear-gradient(
+      rgb(26, 173, 206, 0.91),
+      rgb(26, 173, 206, 0.91)
+    ),
+    url(https://www.brhfoundation.org/wp-content/uploads/light-grey-color-background-solid-light-grey-backgrounds-solid-grey-light-grey-colour-background.jpg);
+    background-size: 100%;
+    background-position-y: -110px;">
+
+            <div style="margin: 20% 15%; color: rgb(255, 255, 255); font-weight: bold;">
+                <br />
+                <br />
+                <p style="font-size: 18px; margin-left:50px">Click the Botton below to enter the raffle!</p>
+               
+                <a href="/Participants/create" style="margin-top:50px">
+                    <div style="width: 250px; margin-top:25px;margin-left:50px;height: 60px; border: 2px solid black;font-size:28px; padding-left:11px ;background: linear-gradient(rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0.5))">
+                        Register in Raffle
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>

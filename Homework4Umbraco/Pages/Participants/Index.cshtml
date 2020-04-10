@@ -1,0 +1,64 @@
+﻿
+@page
+@model Homework4Umbraco.Pages.Participants.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Valid Raffle Entries</h1>
+
+<p>
+    <a asp-page="Create">      Enter Raffle!</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Participant[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Participant[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Participant[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Participant) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @{
+                    var splitfull = item.Email.Split("@");
+                    string startofstring;
+                    if (splitfull[0].Length>3)
+                    {
+                        startofstring = splitfull[0].Substring(0, 4);
+                    }
+                    else
+                    {
+                        startofstring = splitfull[0].Substring(0, 2);
+                    }
+                    var fullstring = startofstring + "****@" + splitfull[1];
+                }
+                    @Html.DisplayFor(modelItem => fullstring )
+                </td>
+
+
+                <td>
+                @*<a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
