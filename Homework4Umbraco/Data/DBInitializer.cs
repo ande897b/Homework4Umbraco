@@ -1,4 +1,6 @@
 ﻿using ClassLibrary;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.WebSockets.Internal;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +16,9 @@ namespace Homework4Umbraco.Data
     {
         public static void Initialize(Homework4UmbracoContext context)
         {
+          
+            
+
             context.Database.EnsureCreated();
             string[] lines = File.ReadAllLines(@"SerialNumbers.txt"); //Loads Serialnumbers from .txt
 

@@ -10,6 +10,7 @@ using Homework4Umbraco.Data;
 
 namespace Homework4Umbraco.Pages.SerialNumbers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class DeleteModel : PageModel
     {
         private readonly Homework4Umbraco.Data.Homework4UmbracoContext _context;

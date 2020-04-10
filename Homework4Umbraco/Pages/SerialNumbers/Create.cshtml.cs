@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ClassLibrary;
 using Homework4Umbraco.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Homework4Umbraco.Pages.SerialNumbers
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly Homework4Umbraco.Data.Homework4UmbracoContext _context;
