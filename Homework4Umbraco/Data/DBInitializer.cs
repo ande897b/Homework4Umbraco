@@ -16,21 +16,16 @@ namespace Homework4Umbraco.Data
     {
         public static void Initialize(Homework4UmbracoContext context)
         {
-          
-            
 
             context.Database.EnsureCreated();
-            string[] lines = File.ReadAllLines(@"SerialNumbers.txt"); //Loads Serialnumbers from .txt
+                       
+                string[] lines = File.ReadAllLines(@"SerialNumbers.txt"); //Loads Serialnumbers from .txt
 
-            foreach (string line in lines)
-            {
-                context.SerialNumber.Add(new SerialNumber { SerialNumberID = line.ToString() });
-                SerialNumberController.AddSerialNumber(new SerialNumber { SerialNumberID = line.ToString() });
-            }
-          
-            
-           
-            
+                foreach (string line in lines)
+                {
+                    context.SerialNumber.Add(new SerialNumber { SerialNumberID = line.ToString() });
+                    SerialNumberController.AddSerialNumber(new SerialNumber { SerialNumberID = line.ToString() });
+                }                     
 
             if (context.SerialNumber.Any() && context.Participant.Any())
             {
@@ -42,12 +37,11 @@ namespace Homework4Umbraco.Data
         }
         public static void LoadFromDB()
         {
-            List<String> columnData = new List<String>();
             var conn_string = "Server=(localdb)\\mssqllocaldb;Database=Homework4UmbracoContext-795d9d9d-4a24-4747-9160-e1378d933fa1;Trusted_Connection=True;MultipleActiveResultSets=true";
             using (SqlConnection connection = new SqlConnection(conn_string))
             {
                 connection.Open();
-                string query = "SELECT * FROM dbo.Participant";
+                string query = "SELECT ID,FirstName,LastName,Email,SerialNumberID FROM dbo.Participant";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
@@ -64,12 +58,7 @@ namespace Homework4Umbraco.Data
                         }
                     }
                 }
-            }
-           
-
-        }               
-            
-        
+            }          
+        }       
     }  
-   
 }

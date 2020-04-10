@@ -1,5 +1,11 @@
 ﻿Okay so i gave it a shot, not everything went as hoped but i did my best.
 
+
+Go to package manager and do the following commands:
+	Add-migration LoginFromUmbraco -Context ApplicatinDbContext
+	Update-Database -Context ApplicatinDbContext
+
+
 If its launches on local host without problems ->
 Register in top right corner (Email + Password(Can just be made up), This was supposed to be admin rights) - You can enter the raffle without being logged in, but to view entries it is required.
 Features and things i spend time on:

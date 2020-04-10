@@ -4,6 +4,8 @@
 
 @{
     ViewData["Title"] = "Index";
+
+    
 }
 
 <h1>Valid Raffle Entries</h1>
@@ -32,7 +34,9 @@
                     @Html.DisplayNameFor(model => model.Participant[0].Email)
                     </a>
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Participant[0].SerialNumberID)
+            </th>
         </tr>
     </thead>
     <tbody>

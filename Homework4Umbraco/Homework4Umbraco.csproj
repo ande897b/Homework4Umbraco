@@ -6,6 +6,10 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\ReadMe.txt" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="AjaxControlToolkit" Version="19.1.0" />
