@@ -12,8 +12,8 @@ Features and things i spend time on:
 Seeding database with the Serial Numbers from the .txt
 Loading Participants from database (And saving when new ones are made)
 Only accepting Valid Serial number formats (xxxx-xxxx-xxxx-xxxx)(And checking that each serial number is used a maximum of 2 times)
-Pagination with 10 participants on each page.
-Sorting on Pagination
+Pagination with 10 participants on each page. (Obviously you need to create 10+ valid entries to see it)
+Sorting on Pagination 
 
 
 
