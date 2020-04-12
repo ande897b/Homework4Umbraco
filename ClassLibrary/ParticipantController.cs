@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class ParticipantController
+    public class ParticipantController // Handle add and get list of participants
+
     {
         public static List<Participant> participants = new List<Participant>();
 

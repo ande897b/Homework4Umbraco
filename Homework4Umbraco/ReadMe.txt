@@ -2,8 +2,8 @@
 
 
 Go to package manager and do the following commands:
-	Add-migration LoginFromUmbraco -Context ApplicatinDbContext
-	Update-Database -Context ApplicatinDbContext
+	Add-migration LoginFromUmbraco -Context ApplicationDbContext
+	Update-Database -Context ApplicationDbContext
 
 
 If its launches on local host without problems ->

@@ -25,7 +25,7 @@ namespace ClassLibrary
         [MaxLength(50)]
         public string Email { get; set; }
 
-        [RegularExpression(@"^([a-zA-Z0-9]{4}[-]){3}[a-zA-Z0-9]{4}", ErrorMessage = "Serial number format should be like this: xxxx-xxxx-xxxx-xxxx")]
+        [RegularExpression(@"^([a-zA-Z0-9]{4}[-]){3}[a-zA-Z0-9]{4}", ErrorMessage = "Serial number format should be like this: xxxx-xxxx-xxxx-xxxx")] // sets the required input as "xxxx-xxxx-xxxx-xxxx"
         [Required]
         [DisplayName("Serial Number")]
         public string SerialNumberID { get; set; }
